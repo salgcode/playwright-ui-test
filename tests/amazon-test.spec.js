@@ -10,7 +10,7 @@ test('Amazon Login test', async ({ page }) =>{
   await page.getByLabel('Email or mobile phone number').press('Tab');
   await page.getByLabel('Continue').press('Enter');
   await page.getByLabel('Password').click();
-  await page.getByLabel('Password').fill('9847037303Thn$');
+  await page.getByLabel('Password').fill('password123');
   await page.getByLabel('Sign-In').click();
   await expect(page.getByRole('link', { name: 'Hello, Ashik Account & Lists' })).toBeVisible();
 
