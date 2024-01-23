@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "``` Task Completed ``` 1. Created Project in github 2. Clone project from github to local machine 3. Created REDME.md file and push it to github from local machine",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "pretest": "tsc --incremental -p tests/tsconfig.json",
+    "test": "playwright test -c tests-out"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.40.1",
     "@types/node": "^20.11.3"
+  },
+  "dependencies": {
+    "typescript": "^5.3.3"
   }
 }
